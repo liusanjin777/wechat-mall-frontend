@@ -1,0 +1,125 @@
+page{
+  background-color: #edece8;
+}
+.userinfo_wrap {
+  height: 45vh;
+  background-color: var(--themeColor);
+  position: relative;
+  .image_wrap {
+    position: relative;
+    .userimg_big {
+      height: 45vh;
+      filter: blur(5px);
+    }
+
+    .userinfo {
+      position: absolute;
+      top:30%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      .userimg_small {
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+      }
+
+      .username {
+        margin-top: 50rpx;
+        font-size: 40rpx;
+        color: #fff;
+      }
+    }
+  }
+  .userlogin_btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1rpx solid green;
+    padding: 15rpx;
+    font-size: 32rpx;
+    color: green;
+  }
+}
+.user_content{
+  position: relative;
+  .user_main{
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top:-40rpx;
+    
+    .history{
+      background-color: #fff;
+      display: flex;
+      navigator{
+        flex: 1;
+        text-align: center;
+        padding: 10rpx;
+        .num{
+          color: var(--themeColor);
+        }
+        .collect{}
+      }
+    }
+    .order{
+      .order_title{
+        padding: 20rpx;
+        font-size: 32rpx;
+        margin-top: 20rpx;
+        background-color: #fff;
+      }
+      .order_all{
+        background-color: #fff;
+        margin-top: 5rpx;
+        display: flex;
+        navigator{
+          flex: 1;
+          padding: 10rpx;
+          text-align: center;
+          .iconfont{
+            color: var(--themeColor);
+          }
+          .order_item{}
+        }
+      }
+      .handle_address {
+        padding: 20rpx;
+        font-size: 32rpx;
+        margin-top: 5rpx;
+        background-color: #fff;
+      }
+    }
+    .userAll{
+      margin-top: 20rpx;
+      .customder_service{
+        padding: 20rpx;
+        font-size: 32rpx;
+        margin-top: 5rpx;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+      }
+      .feedback{
+        padding: 20rpx;
+        font-size: 32rpx;
+        margin-top: 5rpx;
+        background-color: #fff;
+      }
+      .about_me{
+        padding: 20rpx;
+        font-size: 32rpx;
+        margin-top: 5rpx;
+        background-color: #fff;
+      }
+    }
+    .share{
+      padding: 20rpx;
+      font-size: 32rpx;
+      margin-top: 20rpx;
+      background-color: #fff;
+    }
+  }
+}

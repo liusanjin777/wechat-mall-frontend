@@ -1,0 +1,78 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/Cart/index",
+          "pathName": "pages/Cart/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "heh",
+          "pathName": "pages/Index/index",
+          "query": "cid=5",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/Goods_detail/index",
+          "query": "goods_id=43986",
+          "scene": null
+        },
+        {
+          "name": "pages/Pay/index",
+          "pathName": "pages/Pay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Auth/index",
+          "pathName": "pages/Auth/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/User/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Order/index",
+          "pathName": "pages/Order/index",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "name": "pages/Collect/index",
+          "pathName": "pages/Collect/index",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "name": "pages/Search/index",
+          "pathName": "pages/Search/index",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "name": "pages/Feedback/index",
+          "pathName": "pages/Feedback/index",
+          "query": "type=1",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

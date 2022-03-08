@@ -1,0 +1,25 @@
+<!--pages/feedback/index.wxml-->
+<Tabs tabs="{{tabs}}" bind:changeTabsItem="handleChangeTabsItem">
+  <view class="fd_main">
+    <view class="title">问题的种类</view>
+    <view class="tips">
+      <view class="tips_item">功能建议</view>
+      <view class="tips_item">购买遇到问题</view>
+      <view class="tips_item">性能问题</view>
+      <view class="tips_item">其他</view>
+    </view>
+    <view class="content">
+      <textarea bindinput="handleTextValue" value="{{textValue}}"></textarea>
+      <view class="fool_img">
+        <button bindtap="handleImgAdress">+</button>
+        <Upimg bindtap="handleDeleteImg" wx:for="{{imgAdress}}" wx:key="*this" src="{{item}}" data-index="{{index}}"></Upimg>
+      </view>
+    </view>
+    <view class="form_btn_row">
+      <button bindtap="handleSubmit" type="warn">
+        <icon type="success_no_circle" size="23" color="white"></icon>
+        提交
+      </button>
+    </view>
+  </view>
+</Tabs>

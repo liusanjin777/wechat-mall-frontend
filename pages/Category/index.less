@@ -1,0 +1,49 @@
+/* pages/category/index.wxss */
+page{
+    height: 100%;
+}
+.cates{
+    height: 100%;
+    .catesContent{
+        height: ~'calc( 100vh - 90rpx )';
+        display: flex;
+        .left{
+            flex: 2;
+            .left_con{
+            height: 80rpx;
+            display: flex;
+            font-size: 30rpx;
+            justify-content: center;
+            align-items: center;
+            
+            }
+            .active{
+                color: red;
+                border-left:4rpx solid red;
+            }
+        }
+        .right{
+            flex: 5;
+           
+        }
+    }
+}
+.right{
+    .right_con{
+        .right_title{
+            text-align: center;
+            color: #999;
+            font-size: 35rpx;
+        }
+        .right_list{
+            display: flex;
+            flex-wrap: wrap;
+            navigator{
+                width: 33.33%;
+                image{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

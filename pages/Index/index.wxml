@@ -1,0 +1,52 @@
+<view class="seach">
+    <seachinput></seachinput>
+    <!-- 轮播图 -->
+    <view class="index_swiper">  
+        <swiper indicator-dots autoplay circular>
+            <swiper-item
+            wx:for="{{swiperList}}"
+            wx:key="goods_id">
+                <navigator url="/pages/Goods_detail/index?goods_id={{item.goods_id}}">
+                    <image mode="widthFix" src="{{item.image_src}}">
+                    </image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 分类列表 -->
+    <view class="index_cate">
+        <navigator 
+        wx:for="{{catesList}}"
+        wx:key="name"
+        url="/pages/Category/index" open-type="switchTab">
+            <image mode="widthFix" src="{{item.image_src}}">
+                
+            </image>
+        </navigator>
+    </view>
+    <!-- 精确分类 -->
+    <view class="index_floor">
+        <view class="floor_1"
+        wx:for="{{floorList}}"
+        wx:for-item="itme1"
+        wx:for-index="index1"
+        wx:key="floor_title">
+            <view class="floor_title">
+                <image class="" src="{{itme1.floor_title.image_src}}" mode="widthFix" >
+                    
+                </image>
+            </view>
+            <view class="floor_list">
+                <navigator  url="/pages/Goods_list/index?query=热" open-type="navigate"
+                wx:for="{{itme1.product_list}}"
+                wx:for-item="itme2"
+                wx:for-index="index2"
+                wx:key="name">
+                    <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{itme2.image_src}}" >
+                        
+                    </image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>

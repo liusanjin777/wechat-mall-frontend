@@ -1,0 +1,17 @@
+<!--pages/collect/index.wxml-->
+<Tabs tabs="{{tabs}}" bind:changeTabsItem="handleChangeTabsItem">
+  <navigator class="goods_detali"
+        wx:for="{{collect}}"
+        wx:key="goods_id"
+        url="/pages/Goods_detail/index?goods_id={{item.goods_id}}">
+        <view class="goods_img">
+          <image src="{{item.goods_small_logo?item.goods_small_logo:'https://api-hmugo-web.itheima.net/pyg/pic_floor03_5@2x.png'}}" mode="widthFix" >
+            
+          </image>
+        </view>
+        <view class="goods_info">
+          <view class="goods_name">{{item.goods_name}}</view>
+          <view class="goods_price">${{item.goods_price}}</view>
+        </view>
+      </navigator>
+</Tabs>

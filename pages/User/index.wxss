@@ -1,0 +1,118 @@
+page {
+  background-color: #edece8;
+}
+.userinfo_wrap {
+  height: 45vh;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.userinfo_wrap .image_wrap {
+  position: relative;
+}
+.userinfo_wrap .image_wrap .userimg_big {
+  height: 45vh;
+  filter: blur(5px);
+}
+.userinfo_wrap .image_wrap .userinfo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.userinfo_wrap .image_wrap .userinfo .userimg_small {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.userinfo_wrap .image_wrap .userinfo .username {
+  margin-top: 50rpx;
+  font-size: 40rpx;
+  color: #fff;
+}
+.userinfo_wrap .userlogin_btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1rpx solid green;
+  padding: 15rpx;
+  font-size: 32rpx;
+  color: green;
+}
+.user_content {
+  position: relative;
+}
+.user_content .user_main {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+.user_content .user_main .history {
+  background-color: #fff;
+  display: flex;
+}
+.user_content .user_main .history navigator {
+  flex: 1;
+  text-align: center;
+  padding: 10rpx;
+}
+.user_content .user_main .history navigator .num {
+  color: var(--themeColor);
+}
+.user_content .user_main .order .order_title {
+  padding: 20rpx;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.user_content .user_main .order .order_all {
+  background-color: #fff;
+  margin-top: 5rpx;
+  display: flex;
+}
+.user_content .user_main .order .order_all navigator {
+  flex: 1;
+  padding: 10rpx;
+  text-align: center;
+}
+.user_content .user_main .order .order_all navigator .iconfont {
+  color: var(--themeColor);
+}
+.user_content .user_main .order .handle_address {
+  padding: 20rpx;
+  font-size: 32rpx;
+  margin-top: 5rpx;
+  background-color: #fff;
+}
+.user_content .user_main .userAll {
+  margin-top: 20rpx;
+}
+.user_content .user_main .userAll .customder_service {
+  padding: 20rpx;
+  font-size: 32rpx;
+  margin-top: 5rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.user_content .user_main .userAll .feedback {
+  padding: 20rpx;
+  font-size: 32rpx;
+  margin-top: 5rpx;
+  background-color: #fff;
+}
+.user_content .user_main .userAll .about_me {
+  padding: 20rpx;
+  font-size: 32rpx;
+  margin-top: 5rpx;
+  background-color: #fff;
+}
+.user_content .user_main .share {
+  padding: 20rpx;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}

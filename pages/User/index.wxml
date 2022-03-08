@@ -1,0 +1,79 @@
+<!--pages/user/index.wxml-->
+<!--  -->
+<view  class="userinfo_wrap">
+  <view wx:if="{{userinfo.nickName}}" class="image_wrap">
+    <image class="userimg_big" src="{{userinfo.avatarUrl}}"></image>
+    <view class="userinfo">
+      <image class="userimg_small" src="{{userinfo.avatarUrl}}"></image>
+      <view class="username">{{userinfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:else class="userlogin_btn">
+    <navigator url="/pages/Login/index">登录</navigator>
+  </view>
+</view>
+<view class="user_content">
+  <view class="user_main">
+    <view class="history">
+      <navigator>
+        <view class="num">0</view>
+        <view class="collect">收藏的店铺</view>
+      </navigator>
+      <navigator url="/pages/Collect/index">
+        <view class="num">{{collectNum}}</view>
+        <view class="collect">收藏的商品</view>
+      </navigator>
+      <navigator>
+        <view class="num">0</view>
+        <view class="collect">关注的商品</view>
+      </navigator>
+      <navigator>
+        <view class="num">0</view>
+        <view class="collect">我的足迹</view>
+      </navigator>
+    </view>
+    <view class="order">
+      <view class="order_title">我的订单</view>
+      <view class="order_all">
+        <navigator url="/pages/Order/index?type=1">
+          <view class="iconfont icon-iconfontdingdan"></view>
+          <view class="order_item">全部订单</view>
+        </navigator>
+        <navigator url="/pages/Order/index?type=2">
+          <view class="iconfont icon-iconfontdingdan"></view>
+          <view class="order_item">待付款</view>
+        </navigator>
+        <navigator url="/pages/Order/index?type=3">
+          <view class="iconfont icon-iconfontdingdan"></view>
+          <view class="order_item">待发货</view>
+        </navigator>
+        <navigator url="/pages/Order/index?type=4">
+          <view class="iconfont icon-iconfontdingdan"></view>
+          <view class="order_item">退款/退货</view>
+        </navigator>
+      
+      
+      </view>
+      <navigator class="handle_address">
+        收货地址管理
+      </navigator>
+    </view>
+    <view class="userAll" >
+      <navigator class="customder_service">
+       <view >联系客服</view>
+      <view >17309645521</view>
+      </navigator>
+      <navigator url="/pages/Feedback/index" class="feedback">
+        意见反馈
+      </navigator>
+      <navigator class="about_me">
+        关于我们
+      </navigator>
+    </view>
+    <view >
+      <navigator class="share">
+        分享
+      </navigator>
+    </view>
+  </view>
+</view>

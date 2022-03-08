@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "seachinput":"../../components/Seachinput/Seachinput"
+  },
+  "navigationBarTitleText": "萝卜快购"
+}

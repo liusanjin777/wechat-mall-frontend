@@ -1,0 +1,53 @@
+page {
+  background-color: #eeeeee;
+}
+.fd_main {
+  padding: 20rpx;
+  color: #666;
+}
+.fd_main .tips {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fd_main .tips .tips_item {
+  width: 30%;
+  padding: 20rpx 10rpx ;
+  background-color: #fff;
+  margin: 20rpx 10rpx;
+  text-align: center;
+}
+.fd_main .content {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.fd_main .content textarea {
+  padding: 10rpx;
+}
+.fd_main .content .fool_img {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10rpx;
+}
+.fd_main .content .fool_img button {
+  padding: 0;
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  color: #666;
+  margin: 0;
+}
+.fd_main .form_btn_row {
+  display: flex;
+  justify-content: flex-end;
+}
+.fd_main .form_btn_row button {
+  margin: 0;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

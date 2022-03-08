@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/Index/index",
+    "pages/Category/index",
+    "pages/Goods_list/index",
+    "pages/Goods_detail/index",
+    "pages/Cart/index",
+    "pages/Collect/index",
+    "pages/Order/index",
+    "pages/Search/index",
+    "pages/Feedback/index",
+    "pages/User/index",
+    "pages/Geedback/index",
+    "pages/Login/index",
+    "pages/Auth/index",
+    "pages/Pay/index"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "某东",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#9999",
+    "selectedColor": "#eb4450",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/Index/index",
+        "text": "首页",
+        "iconPath": "icons/icons/home.png",
+        "selectedIconPath": "icons/icons/home-o.png"
+      },
+      {
+        "pagePath": "pages/Category/index",
+        "text": "分类",
+        "iconPath": "icons/icons/category.png",
+        "selectedIconPath": "icons/icons/category-o.png"
+      },
+      {
+        "pagePath": "pages/Cart/index",
+        "text": "购物车",
+        "iconPath": "icons/icons/cart.png",
+        "selectedIconPath": "icons/icons/cart-o.png"
+      },
+      {
+        "pagePath": "pages/User/index",
+        "text": "用户",
+        "iconPath": "icons/icons/my.png",
+        "selectedIconPath": "icons/icons/my-o.png"
+      }
+    ]
+  },
+  
+
+  "sitemapLocation": "sitemap.json"
+}

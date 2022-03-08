@@ -1,0 +1,25 @@
+/* pages/order/index.wxss */
+.order_mian {
+  display: flex;
+  flex-direction: column;
+}
+.order_mian .order_item {
+  padding: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.order_mian .order_item .id {
+  display: flex;
+  justify-content: space-between;
+}
+.order_mian .order_item .price {
+  display: flex;
+  justify-content: space-between;
+}
+.order_mian .order_item .price .item2 {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+.order_mian .order_item .time {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,43 @@
+/* pages/category/index.wxss */
+page {
+  height: 100%;
+}
+.cates {
+  height: 100%;
+}
+.cates .catesContent {
+  height: calc( 100vh - 90rpx );
+  display: flex;
+}
+.cates .catesContent .left {
+  flex: 2;
+}
+.cates .catesContent .left .left_con {
+  height: 80rpx;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: center;
+  align-items: center;
+}
+.cates .catesContent .left .active {
+  color: red;
+  border-left: 4rpx solid red;
+}
+.cates .catesContent .right {
+  flex: 5;
+}
+.right .right_con .right_title {
+  text-align: center;
+  color: #999;
+  font-size: 35rpx;
+}
+.right .right_con .right_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.right .right_con .right_list navigator {
+  width: 33.33%;
+}
+.right .right_con .right_list navigator image {
+  width: 50%;
+}
