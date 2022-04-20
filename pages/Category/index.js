@@ -1,4 +1,4 @@
-import {request} from '../../request/index'
+import {request} from '../../request/http'
 Page({
 
   /**

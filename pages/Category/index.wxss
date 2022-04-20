@@ -20,8 +20,8 @@ page {
   align-items: center;
 }
 .cates .catesContent .left .active {
-  color: red;
-  border-left: 4rpx solid red;
+  color: var(--themeColor);
+  border-left: 4rpx solid var(--themeColor);
 }
 .cates .catesContent .right {
   flex: 5;

@@ -6,7 +6,7 @@ page,view,text,swiper,swiper-item,image,navigator{
     box-sizing: border-box; 
 }
 page{
-    --themeColor:#eb4450;
+    --themeColor:#716af2;
     font-size: 28rpx;
 }
 image{

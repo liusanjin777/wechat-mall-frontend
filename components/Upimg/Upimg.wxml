@@ -1,6 +1,6 @@
 <view class="container">
   <image src="{{src}}"></image>
-  <icon bindtap="onTap" type="clear" size="23" color="red">
+  <icon bindtap="onTap" type="clear" size="23" color="var(--themeColor)">
     
   </icon>
 </view>

@@ -18,13 +18,13 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#eb4450",
-    "navigationBarTitleText": "某东",
+    "navigationBarBackgroundColor": "#716af2",
+    "navigationBarTitleText": "萝卜快购",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#9999",
-    "selectedColor": "#eb4450",
+    "selectedColor": "#716af2",
     "backgroundColor": "",
     "position": "bottom",
     "borderStyle": "black",
