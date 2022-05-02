@@ -6,7 +6,7 @@
             <swiper-item
             wx:for="{{swiperList}}"
             wx:key="goods_id">
-                <navigator url="/pages/Goods_detail/index?goods_id={{item.goods_id}}">
+                <navigator url="{{item.navigator_url}}">
                     <image mode="widthFix" src="{{item.image_src}}">
                     </image>
                 </navigator>
@@ -17,8 +17,9 @@
     <view class="index_cate">
         <navigator 
         wx:for="{{catesList}}"
+        wx:for-item="item"
         wx:key="name"
-        url="/pages/Category/index" open-type="switchTab">
+        url="{{item.navigator_url}}" open-type="navigate">
             <image mode="widthFix" src="{{item.image_src}}">
                 
             </image>
@@ -37,12 +38,14 @@
                 </image>
             </view>
             <view class="floor_list">
-                <navigator  url="/pages/Goods_list/index?query=热" open-type="navigate"
+                <navigator  open-type="navigate"
                 wx:for="{{itme1.product_list}}"
-                wx:for-item="itme2"
+                wx:for-item="item2"
                 wx:for-index="index2"
-                wx:key="name">
-                    <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{itme2.image_src}}" >
+                wx:key="name"
+                url="{{item2.navigator_url}}"
+                >
+                    <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}" >
                         
                     </image>
                 </navigator>

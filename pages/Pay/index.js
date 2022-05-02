@@ -48,6 +48,7 @@ async  handlePay(){
       goods_price:v.goods_price,
     }))
     const orderParams={order_price,consignee_addr,goods};
+    console.log(orderParams);
     const {order_number}=await request({url:"/my/orders/create",method:"post",data:orderParams,header})
     console.log(order_number);
     const {pay} = await request({url:"/my/orders/req_unifiedorder",method:"post",data:{order_number},header})

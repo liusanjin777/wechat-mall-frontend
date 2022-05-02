@@ -1,4 +1,5 @@
-import {showModal, showToast} from '../../utils/asyncWx.js'
+  import {request} from '../../request/http';
+  import {showModal, showToast} from '../../utils/asyncWx.js';
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
   data: {
@@ -60,21 +61,10 @@ Page({
   },
 async  handleSub(e){
     const {id,operation} = e.currentTarget.dataset
+    c
     const {cart} = this.data
     let index = cart.findIndex(v=>v.goods_id===id)
     if(cart[index].num === 1 && operation=== -1) {
-      // wx.showModal({
-      //   title: '提示',
-      //   content: '您是否要删除',
-      //   success: (result) => {
-      //     if(result.confirm){
-      //       cart.splice(index,1)
-      //       this.setCart(cart)
-      //     }else if(result.cancel) {
-            
-      //     }
-      //   },
-      // });
       const result = await showModal({content:"您是否要删除"}) 
       if(result.confirm){
         cart.splice(index,1)

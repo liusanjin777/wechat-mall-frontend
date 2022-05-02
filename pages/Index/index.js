@@ -1,4 +1,4 @@
-  import {request} from '../../request/http'
+  import {request} from '../../request/http';
 Page({
   data: {
     swiperList:[],

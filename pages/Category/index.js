@@ -33,28 +33,6 @@ Page({
    }
   },
   getcategorylist(){
-    // var reqTask = wx.request({
-    //   // https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata
-    //   url: '/categories',
-    //   data: {},
-    //   header: {'content-type':'application/json'},
-    //   method: 'GET',
-    //   dataType: 'json',
-    //   responseType: 'text',
-    //   success: (result)=>{
-    //     this.Cates = result.data.message;
-    //     wx.setStorageSync("cates", {time:Date.now(),data:this.Cates});
-    //     let leftList = this.Cates.map(x=>x.cat_name);
-    //     let rightList = this.Cates[0].children
-    //     this.setData({
-    //       leftList,
-    //       rightList
-    //     })
-        
-    //   },
-    //   fail: ()=>{},
-    //   complete: ()=>{}
-    // });
     request({url:'/categories'}).then(res=>{
       this.Cates = res;
       wx.setStorageSync("cates", {time:Date.now(),data:this.Cates});
