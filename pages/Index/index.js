@@ -1,4 +1,4 @@
-  import {request} from '../../request/http';
+  import {http} from '../../request/http';
 Page({
   data: {
     swiperList:[],
@@ -12,7 +12,7 @@ Page({
 
   },
   async getswiperlist(){
-    const res = await request({
+    const res = await http({
       url:'/home/swiperdata'
     });
     this.setData({
@@ -20,7 +20,7 @@ Page({
   });
   },
   async getcateslist(){
-    const res = await request({
+    const res = await http({
       url:'/home/catitems'
     })
     this.setData({
@@ -28,7 +28,7 @@ Page({
     });
   },
   async getfloorist(){
-    const res = await request({
+    const res = await http({
       url:'/home/floordata'
     });
     this.setData({

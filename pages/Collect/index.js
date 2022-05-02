@@ -1,4 +1,6 @@
 // pages/collect/index.js
+import { http } from '../../request/http'
+
 Page({
 
   /**
@@ -29,10 +31,16 @@ Page({
     ],
     collect:[]
   },
-  onShow(){
+  async onShow(){
+    const userInfo = wx.getStorageSync('userInfo');
+    const collectList = await http({
+      url: `/collect/${userInfo.userId}`
+    })
+    console.log(collectList);
     let collect = wx.getStorageSync("collect") || [];
+    console.log(collect);
     this.setData({
-      collect
+      collect: collectList
     })
   },
   handleChangeTabsItem(e){

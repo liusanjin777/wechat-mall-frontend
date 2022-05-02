@@ -1,4 +1,4 @@
-import {request} from '../../request/http'
+import {http} from '../../request/http'
 Page({
 
   /**
@@ -33,7 +33,7 @@ Page({
    }
   },
   getcategorylist(){
-    request({url:'/categories'}).then(res=>{
+    http({url:'/categories'}).then(res=>{
       this.Cates = res;
       wx.setStorageSync("cates", {time:Date.now(),data:this.Cates});
       let leftList = this.Cates.map(x=>x.cat_name);

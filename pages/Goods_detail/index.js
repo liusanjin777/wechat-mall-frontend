@@ -1,4 +1,5 @@
 import {request} from '../../request/index'
+import { http } from '../../request/http'
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
 
@@ -64,14 +65,23 @@ Page({
       
     });
   },
-  handleCollect(){
+  async handleCollect(){
   let isCollect =false
   let collect=  wx.getStorageSync("collect") || [];
+  const userInfo = wx.getStorageSync("userInfo");
   let index = collect.findIndex(v=>v.goods_id === this.GoodsInfo.goods_id)
   console.log(this.GoodsInfo);
   if(index !== -1) {
     collect.splice(index,1)
     isCollect =false
+    await http({
+      url: '/collect/cancel',
+      method: 'delete',
+      data: {
+        goods_id: this.GoodsInfo.goods_id,
+        userId: userInfo.userId
+      }
+    })
     wx.showToast({
       title: '取消成功',
       icon:"success",
@@ -81,8 +91,16 @@ Page({
   }else {
     collect.push(this.GoodsInfo)
     isCollect =true
+    await http({
+      url: '/collect/add',
+      method: 'post',
+      data: {
+        goods_id: this.GoodsInfo.goods_id,
+        userId: userInfo.userId
+      }
+    })
     wx.showToast({
-      title: '收藏成功成功',
+      title: '收藏成功',
       icon:"success",
       mask: true,
     });

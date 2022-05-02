@@ -1,4 +1,4 @@
-  import {request} from '../../request/http';
+  import { http } from '../../request/http';
   import {showModal, showToast} from '../../utils/asyncWx.js';
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({

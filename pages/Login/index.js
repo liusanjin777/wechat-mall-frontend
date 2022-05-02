@@ -1,4 +1,4 @@
-import { request } from '../../request/http'
+import { http } from '../../request/http'
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
     wx.login({
       success (code) {
         console.log(code.code);
-        request({
+        http({
           url: '/users/login',
           method: 'post',
           data: {
@@ -20,10 +20,10 @@ Page({
           }
         }).then(res => {
           userInfo.userId = res.userId
+          wx.setStorageSync("userInfo", userInfo);
         })
       }
     })
-    console.log(userInfo);
     wx.setStorageSync("userInfo", userInfo);
     wx.navigateBack({
       delta: 1

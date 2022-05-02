@@ -19,7 +19,7 @@
         wx:for="{{catesList}}"
         wx:for-item="item"
         wx:key="name"
-        url="{{item.navigator_url}}" open-type="navigate">
+        url="{{item.navigator_url}}" open-type="{{item.open_type}}">
             <image mode="widthFix" src="{{item.image_src}}">
                 
             </image>

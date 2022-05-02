@@ -1,5 +1,5 @@
 let ajxaTimes=0;
-export const request = (params)=>{
+export const http = (params)=>{
   ajxaTimes++;
   wx.showLoading({
     title: '加载中',
