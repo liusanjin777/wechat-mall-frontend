@@ -32,13 +32,7 @@ Page({
     collect:[]
   },
   async onShow(){
-    const userInfo = wx.getStorageSync('userInfo');
-    const collectList = await http({
-      url: `/collect/${userInfo.userId}`
-    })
-    console.log(collectList);
-    let collect = wx.getStorageSync("collect") || [];
-    console.log(collect);
+    let collectList = wx.getStorageSync("collect") || [];
     this.setData({
       collect: collectList
     })

@@ -1,4 +1,6 @@
 // pages/user/index.js
+import { http } from '../../request/http'
+
 Page({
 
   /**
@@ -8,13 +10,15 @@ Page({
     userinfo:{},
     collectNum:0
   },
-  onShow() {
+  async onShow() {
     const userInfo = wx.getStorageSync("userInfo");
-    const collect = wx.getStorageSync("collect");
-
+    const collect = await http({
+      url: `/collect/${userInfo.userId}`
+    })
+    wx.setStorageSync('collect', collect)
     this.setData({
       userinfo:userInfo,
-      collectNum:collect.length
+      collectNum: collect.length
     })
   },
 })

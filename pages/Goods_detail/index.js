@@ -8,11 +8,13 @@ Page({
    */
   data: {
     goodsObj:{},
-    isCollect:false
+    isCollect:false,
+    collect: []
   },
   GoodsInfo:{
     
   },
+  isCollect: false,
   /**
    * 生命周期函数--监听页面加载
    */
@@ -20,23 +22,35 @@ Page({
       let page =  getCurrentPages();
       let currentpage = page[page.length - 1]
       const {goods_id} =currentpage.options
-      this.getGoodsDtailList(goods_id)
-    
+      this.getGoodsDtailList(goods_id);
+      this.handleIsCollect(goods_id)
+
+  },
+  async handleIsCollect(goods_id) {
+    const userInfo = wx.getStorageSync("userInfo");
+    const res =  await http({
+      url: '/collect',
+      method: 'get',
+      data: {
+        goods_id,
+        userId: userInfo.userId
+      }
+    });
+    this.isCollect = res;
+    this.setData({
+      isCollect: res
+    });
   },
   async getGoodsDtailList(goods_id) {
     const goodsObj = await request({url:"/goods/detail",data:{goods_id}})
-    this.GoodsInfo=goodsObj
-    let collect = wx.getStorageSync("collect") || [];
-    let isCollect = collect.some(v=>v.goods_id === this.GoodsInfo.goods_id) 
-    
+    this.GoodsInfo = goodsObj
     this.setData({
       goodsObj:{
         goods_price:goodsObj.goods_price,
         goods_name:goodsObj.goods_name,
         goods_introduce:goodsObj.goods_introduce.replace(/\.webp/g,'.jpg'),
         pics : goodsObj.pics
-      },
-      isCollect
+      }
     })
   },
   handlePerviewImage(e){
@@ -66,14 +80,9 @@ Page({
     });
   },
   async handleCollect(){
-  let isCollect =false
-  let collect=  wx.getStorageSync("collect") || [];
   const userInfo = wx.getStorageSync("userInfo");
-  let index = collect.findIndex(v=>v.goods_id === this.GoodsInfo.goods_id)
-  console.log(this.GoodsInfo);
-  if(index !== -1) {
-    collect.splice(index,1)
-    isCollect =false
+  if( this.isCollect ) {
+    this.isCollect =false
     await http({
       url: '/collect/cancel',
       method: 'delete',
@@ -89,8 +98,7 @@ Page({
       
     });
   }else {
-    collect.push(this.GoodsInfo)
-    isCollect =true
+    this.isCollect =true
     await http({
       url: '/collect/add',
       method: 'post',
@@ -105,9 +113,8 @@ Page({
       mask: true,
     });
   }
-  wx.setStorageSync("collect", collect);
   this.setData({
-    isCollect
+    isCollect: this.isCollect
   })
   }
   
